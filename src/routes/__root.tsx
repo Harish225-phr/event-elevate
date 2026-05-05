@@ -29,11 +29,24 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Emcee Pramod — Wedding Anchor & Corporate Host in India" },
+      {
+        name: "description",
+        content:
+          "Emcee Pramod — premium wedding anchor, corporate event host & live show MC. 500+ events. Book the best emcee for weddings, corporate events & team building in India.",
+      },
+      {
+        name: "keywords",
+        content:
+          "wedding anchor India, best emcee for wedding, corporate event host India, professional emcee services, event host near me, wedding MC services, Bengaluru emcee",
+      },
+      { name: "author", content: "Emcee Pramod" },
+      { property: "og:title", content: "Emcee Pramod — Experience Creator | Wedding Anchor | Corporate MC" },
+      {
+        property: "og:description",
+        content:
+          "Turning events into unforgettable experiences. 500+ events hosted across weddings, corporate stages and live shows.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },

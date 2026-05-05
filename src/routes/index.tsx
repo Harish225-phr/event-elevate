@@ -1,26 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Videos } from "@/components/site/Videos";
+import { Gallery } from "@/components/site/Gallery";
+import { WhyChoose } from "@/components/site/WhyChoose";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Instagram } from "@/components/site/Instagram";
+import { Booking } from "@/components/site/Booking";
+import { Blog } from "@/components/site/Blog";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { FloatingActions } from "@/components/site/FloatingActions";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
+  useReveal();
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="bg-background text-foreground overflow-x-clip">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Videos />
+        <Gallery />
+        <WhyChoose />
+        <Testimonials />
+        <Instagram />
+        <Booking />
+        <Blog />
+        <Contact />
+      </main>
+      <Footer />
+      <FloatingActions />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
