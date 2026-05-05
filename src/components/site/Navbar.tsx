@@ -68,20 +68,30 @@ export function Navbar() {
           </div>
         </div>
 
-        {open && (
-          <nav className="lg:hidden py-4 grid gap-1 animate-fade-in">
-            {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
+      </div>
+
+      {/* Mobile menu — full overlay panel below the bar */}
+      <div
+        className={cn(
+          "lg:hidden fixed inset-x-3 sm:inset-x-6 z-40 origin-top transition-all duration-300",
+          scrolled ? "top-[76px]" : "top-[88px]",
+          open
+            ? "opacity-100 scale-100 pointer-events-auto"
+            : "opacity-0 scale-95 pointer-events-none"
         )}
+      >
+        <nav className="glass-strong rounded-2xl shadow-elegant p-3 grid gap-1">
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="px-4 py-3 rounded-xl text-sm font-medium text-foreground/90 hover:bg-secondary hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
       </div>
     </header>
   );
