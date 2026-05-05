@@ -49,9 +49,13 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='56' fill='%23111827'/%3E%3Ccircle cx='128' cy='128' r='74' fill='%23c9a25d'/%3E%3C/svg%3E",
+      },
       {
         rel: "stylesheet",
         href: appCss,
